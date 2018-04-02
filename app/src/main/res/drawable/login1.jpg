@@ -1,0 +1,42 @@
+<?xml version="1.0"?><svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Login_Button.png</title>
+ <defs>
+  <filter id="filter3318">
+   <feGaussianBlur id="feGaussianBlur3320" stdDeviation="0.379811"/>
+  </filter>
+  <linearGradient id="linearGradient3322">
+   <stop stop-color="#bce6ff" offset="0" id="stop3324"/>
+   <stop stop-color="#72a2db" id="stop3326" offset="0.623077"/>
+   <stop stop-color="#00448f" offset="1" id="stop3328"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3255">
+   <stop stop-color="#001e6e" id="stop3257" offset="0"/>
+   <stop stop-color="#000000" stop-opacity="0" id="stop3259" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3247">
+   <stop stop-color="#d1fdff" id="stop3249" offset="0"/>
+   <stop stop-color="#c4e6ff" stop-opacity="0" id="stop3251" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3237">
+   <stop stop-color="#ffffff" id="stop3239" offset="0"/>
+   <stop stop-color="#d1f3ff" stop-opacity="0.256198" id="stop3241" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="-0.000001" x2="0.555564" y1="1.029409" x1="0.555564" id="linearGradient3307" xlink:href="#linearGradient3247"/>
+  <linearGradient y2="1.181629" x2="0.500366" y1="-0.000006" x1="0.500366" id="linearGradient3310" xlink:href="#linearGradient3237"/>
+  <linearGradient y2="0.177594" x2="0.561471" y1="0.808179" x1="0.561471" id="linearGradient3313" xlink:href="#linearGradient3322"/>
+  <linearGradient y2="1.404241" x2="0.365621" y1="0.172472" x1="0.365621" id="linearGradient3315" xlink:href="#linearGradient3255"/>
+ </defs>
+ <metadata id="metadata7">image/svg+xml</metadata>
+ <g>
+  <title>Layer 1</title>
+  <g id="layer1">
+   <g id="g2413">
+    <rect fill="#000000" fill-opacity="0.140187" stroke-miterlimit="4" stroke-dashoffset="0" filter="url(#filter3318)" y="30.070284" x="34.313224" height="23.541594" width="52.420509" id="button_shadow" ry="11.770797" rx="11.930446" transform="matrix(5.32234,0,0,5.6071,-1.62655,-4.6071) "/>
+    <rect fill="url(#linearGradient3313)" stroke="url(#linearGradient3315)" stroke-width="1.021753" stroke-miterlimit="4" stroke-dashoffset="0" id="glossy_button" width="262.78712" height="120.396897" x="189.106435" y="166.93199" ry="10.489123" rx="10.192005"/>
+    <path opacity="0.883621" fill="url(#linearGradient3310)" stroke-width="2" stroke-miterlimit="4" stroke-dashoffset="0" d="m243.119415,169.739136l154.92337,0c27.078186,0.782455 43.174347,40.173904 16.347412,40.173904l-187.788467,0c-26.82692,0 -10.730774,-39.391449 16.517654,-40.173904l0.000031,0z" id="light_reflex"/>
+    <rect fill="url(#linearGradient3307)" stroke-width="2" stroke-miterlimit="4" stroke-dashoffset="0" id="filtered_light" width="193.153845" height="40.173913" x="223.923071" y="238.608696" ry="3.294118" rx="3.546124"/>
+   </g>
+  </g>
+  <text transform="matrix(2.65385,0,0,2.85185,171.346,39.963) " xml:space="preserve" text-anchor="middle" font-family="Arial" font-size="24" id="svg_1" y="73.785762" x="55.202724" stroke-width="0" stroke="#000000" fill="#000000">LogIn</text>
+ </g>
+</svg>

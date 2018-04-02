@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "779236524809",
+    "firebase_url": "https://navimate-1519033664780.firebaseio.com",
+    "project_id": "navimate-1519033664780",
+    "storage_bucket": "navimate-1519033664780.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779236524809:android:8c0d3af362c7aab5",
+        "android_client_info": {
+          "package_name": "com.project.ria.navimate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779236524809-krnilmp4m4u73jbpleutrkg8vl9qi036.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.ria.navimate",
+            "certificate_hash": "260c2d530915392673e67f409ad1abbc63feedea"
+          }
+        },
+        {
+          "client_id": "779236524809-h7bavfofqt6q9832v1f6ldfisas6jqpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA09dDiBkJj8mq1SXj3zN1deKvDLdzr89c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779236524809-h7bavfofqt6q9832v1f6ldfisas6jqpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
