@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "779236524809-4jn78el8bojqiaqqb7c0gomoig14kqlc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.ria.navimate",
+            "certificate_hash": "24563f60a5e91851905b8c69dc05e83d8b4872d4"
+          }
+        },
+        {
           "client_id": "779236524809-krnilmp4m4u73jbpleutrkg8vl9qi036.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

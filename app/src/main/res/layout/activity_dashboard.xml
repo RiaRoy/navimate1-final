@@ -7,22 +7,26 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    tools:context="com.example.ria.navimate.MainActivity">
+    tools:context="com.example.ria.navimate.MainActivity"
+    android:background="@drawable/navigation">
 
     <Button
         android:layout_width="match_parent"
         android:id="@+id/track"
         android:text="Start Location Sharing"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
     <Button
         android:layout_width="match_parent"
         android:id="@+id/contacts"
         android:text="Contacts"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
     <Button
         android:layout_width="match_parent"
         android:id="@+id/find"
         android:text="Locate Friends"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+     />
 
 </LinearLayout>

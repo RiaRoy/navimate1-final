@@ -1,8 +1,6 @@
 package com.project.ria.navimate;
 
-/**
- * Created by skynet on 3/3/18.
- */
+
 
 
 import android.app.Activity;
@@ -29,6 +27,7 @@ public class CustomList extends BaseAdapter
 {
     Activity context;
     ArrayList<Contacts>d;
+    int pos=0;
     private DatabaseReference mDatabase;
 
     public CustomList(Activity context, ArrayList<Contacts>u) {
@@ -60,7 +59,7 @@ public class CustomList extends BaseAdapter
     public View getView(final int position, View convertView, ViewGroup parent)
     {
         // TODO Auto-generated method stub
-        final ViewHolder holder;
+        ViewHolder holder;
         LayoutInflater inflater =  context.getLayoutInflater();
 
         if (convertView == null)
@@ -69,64 +68,49 @@ public class CustomList extends BaseAdapter
             holder = new ViewHolder();
             holder.txtViewTitle = (TextView) convertView.findViewById(R.id.name);
             holder.txtViewDescription = (TextView) convertView.findViewById(R.id.phone);
+
             convertView.setTag(holder);
         }
         else
         {
             holder = (ViewHolder) convertView.getTag();
         }
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        Query query = mDatabase.child("Location").orderByChild("phone").equalTo(d.get(position).getPhone());
-        query.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                if (dataSnapshot.exists()) {
-                    // dataSnapshot is the "issue" node with all children with id 0
 
-                    holder.txtViewTitle.setText(d.get(position).getName());
-                    holder.txtViewDescription.setText(d.get(position).getPhone());
-                    holder.txtViewTitle.setTextColor(Color.GREEN);
-                    holder.txtViewDescription.setTextColor(Color.GREEN);
+        holder.txtViewTitle.setText(d.get(position).getName());
+        holder.txtViewDescription.setText(d.get(position).getPhone());
+
+        if(d.get(position).getName().equals("OTHER CONTACTS")) {
+pos=position;        }
+
+
+        if(!d.get(position).getName().equals("OTHER CONTACTS")) {
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.i("TAG", "CLICK");
+                    if(position>pos)
+                    {
+                        try {
+                            String smsBody="Navimate. Install Navimate for live location tracking and sharing your live location to your dear ones\n.Visit http://www.play.google.com to download.";
+                            Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                            sendIntent.putExtra("sms_body", smsBody);
+                            sendIntent.putExtra("address", d.get(position).getPhone());
+                            sendIntent.setType("vnd.android-dir/mms-sms");
+                            context.startActivity(sendIntent);
+                        } catch(Exception e) {
+                            //e.toString();
+                        }
+                    }
+                    else
+                    checkUser(d.get(position).getPhone(), view.getContext());
+
                 }
-            else {
-
-                    holder.txtViewTitle.setText(d.get(position).getName());
-                    holder.txtViewDescription.setText(d.get(position).getPhone());
-                }
-            }
-
-                                        @Override
-                                        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-                                        }
-
-                                        @Override
-                                        public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-                                        }
-
-                                        @Override
-                                        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-                                        }
-
-                                        @Override
-                                        public void onCancelled(DatabaseError databaseError) {
-
-            }
-                                        });
-
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("TAG","CLICK");
-                checkUser(d.get(position).getPhone(),view.getContext());
-
-            }
-        });
+            });
 
 
+        }
         return convertView;
+
     }
 
 
@@ -140,15 +124,18 @@ public class CustomList extends BaseAdapter
                 if (dataSnapshot.exists()) {
                     // dataSnapshot is the "issue" node with all children with id 0
 
-                    Intent intent=new Intent(c1,Dashboard.class);
+                    Intent intent=new Intent(c1,LiveActivity.class);
                     intent.putExtra("lat",dataSnapshot.getValue(Location.class).getLatitude());
                     intent.putExtra("lon",dataSnapshot.getValue(Location.class).getLongitude());
                     intent.putExtra("phone",dataSnapshot.getValue(Location.class).getPhone());
                     intent.putExtra("name",dataSnapshot.getValue(Location.class).getUname());
+                    intent.putExtra("id",dataSnapshot.getValue(Location.class).getId());
+
                     c1.startActivity(intent);
 
 
                 }
+
 
 
             }
@@ -174,4 +161,5 @@ public class CustomList extends BaseAdapter
             }
         });
     }
+
 }

@@ -3,15 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/loc">
 
     <TextView
         android:id="@+id/location_text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="Location"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Location"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
 
     <LinearLayout
@@ -19,18 +21,20 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/start_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Location!"
-            android:id="@+id/start_location"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#dda0dd"
+            android:text="Share Location" />
 
         <Button
+            android:id="@+id/stop_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Stop Location!"
-            android:id="@+id/stop_location"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#dda0dd"
+            android:text="Stop Sharing" />
     </LinearLayout>
 
 </LinearLayout>

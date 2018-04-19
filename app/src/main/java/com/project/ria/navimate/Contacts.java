@@ -2,9 +2,6 @@ package com.project.ria.navimate;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
-/**
- * Created by skynet on 3/4/18.
- */
 
 @IgnoreExtraProperties
 public class Contacts {

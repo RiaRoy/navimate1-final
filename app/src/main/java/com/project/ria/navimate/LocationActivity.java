@@ -134,7 +134,7 @@ public class LocationActivity extends AppCompatActivity implements OnLocationUpd
 
     private void stopLocation() {
         SmartLocation.with(this).location().stop();
-        locationText.setText("Location stopped!");
+        locationText.setText("Location Tracing stopped!");
 
 
     }
@@ -147,7 +147,7 @@ public class LocationActivity extends AppCompatActivity implements OnLocationUpd
                     location.getLatitude(),
                     location.getLongitude());
 
-            locationText.setText(text);
+            locationText.setText("Location Tracing Started");
 
             // We are going to get the address for the current position
             /*
